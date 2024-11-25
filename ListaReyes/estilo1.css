@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transiciones suaves para el cambio de color */
+    background-color: #222; /* Fondo oscuro por defecto */
+    color: #f4f4f4; /* Texto claro por defecto */
+}
+
+/* Navbar */
+.navbar {
+    background-color: #563d7c !important; /* Color lila para ambos modos */
+}
+
+
+
+/* Modo Claro */
+body.light-mode {
+    background-color: #f4f4f4; /* Fondo claro */
+    color: #333; /* Texto oscuro */
+}
+
+/* Navbar en modo claro */
+.navbar.light-mode {
+    background-color: #563d7c !important; /* Mantener el lila en el modo claro */
+}
+
+
+/* Sección de Introducción */
+.intro-section {
+    padding: 2rem; /* Añade un poco de espacio en la sección */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transiciones suaves */
+}
+
+/* Introducción en modo claro */
+.intro-section.light-mode {
+    background-color: #f4f4f4; /* Fondo claro para la introducción */
+    color: #333; /* Texto oscuro en modo claro */
+}
+
+/* Navbar */
+.nav-link {
+    color: white; /* Color de los enlaces de navegación en modo oscuro */
+}
+
+/* Enlaces de navegación en modo claro */
+.nav-link.light-mode {
+    color: white; /* Color de texto de los enlaces en modo claro */
+}
+.btn{
+background-color: #563d7c;
+border-color: black;
+}
+ 
+.btn:hover{
+    background-color: #563d7c;
+    border-color: black;
+}
+
+.btn-primary:active, .btn-primary:focus {
+    background-color: #563d7c !important; /* O el color que quieras mantener */
+    border-color: #563d7c !important;  /* También mantener el borde */
+    box-shadow: none !important; /* Quitar el contorno al hacer clic si lo deseas */
+}
+
+.card-body{
+    color: black;
+}
+.card-img-top {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    height: 500px; /* Establece una altura fija para todas las imágenes */
+    object-fit:contain; /* Recorta la imagen para que se ajuste al contenedor */
+}
+
+.custom-dropdown {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.custom-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+}

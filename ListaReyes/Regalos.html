@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Regalos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilo1.css"> <!-- Tu archivo CSS personalizado -->
+    <style>
+        .custom-dropdown {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px; /* Espacio debajo del menú */
+        }
+
+        .custom-dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            left: 0; /* Alinear a la izquierda */
+            top: 100%; /* Para que aparezca justo debajo del botón */
+        }
+
+        .custom-dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .custom-dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .custom-dropdown:hover .custom-dropdown-content {
+            display: block; /* Mostrar contenido al pasar el ratón */
+        }
+
+        /* Ajuste para los productos filtrados */
+        .custom-categoria {
+            display: none; /* Ocultar los productos por defecto */
+        }
+
+        /* Contenedor principal ajustado para dejar espacio al menú lateral */
+        .custom-content-container {
+            margin-top: 20px; /* Espacio para el menú */
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Lista David Navidad</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Regalos.html">Lista de Regalos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <button id="toggle-dark-mode" class="btn btn-outline-light ml-3">Modo Oscuro</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container text-center py-5">
+        <h1>Lista de Regalos para David</h1>
+        <p>Aquí podrás ver todos los regalos organizados por categorías y con sus respectivos links de compra.</p>
+    </div>
+
+    <section class="intro-section py-5 custom-content-container">
+        <div class="container">
+            <h2 class="font-weight-bold text-center">Regalos Sugeridos</h2>
+            <div class="custom-dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button">
+                    Categorías
+                </button>
+                <div class="custom-dropdown-content">
+                    <a href="#" onclick="filterCategory('ropa')">Ropa</a>
+                    <a href="#" onclick="filterCategory('tecnologia')">Tecnología</a>
+                    <a href="#" onclick="filterCategory('extra')">Otras Cosas</a>
+                    <a href="#" onclick="filterCategory('todo')">Ver Todo</a>
+                </div>
+            </div>
+            <div class="row">
+
+
+                <!-- Categoría: Ropa -->
+                
+                <!-- Producto 1 -->
+                <div class="col-lg-4 mb-4 custom-categoria ropa">
+                    <div class="card">
+                        <img src="img/SudaderaMangaCorta1.webp" class="card-img-top" alt="Regalo 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Sudadera manga corta STWD</h5>
+                            <p class="card-text">Sudadera manga corta STWD</p>
+                            <a href="https://www.pullandbear.com/es/sudadera-manga-corta-stwd-l03245555?cS=800" class="btn btn-primary">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 2 -->
+                <div class="col-lg-4 mb-4 custom-categoria ropa">
+                    <div class="card">
+                        <img src="img/SudaderaMangaCorta2.webp" class="card-img-top" alt="Regalo 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Sudadera manga corta STWD</h5>
+                            <p class="card-text">Sudadera manga corta STWD</p>
+                            <a href="https://www.pullandbear.com/es/sudadera-manga-corta-stwd-l03245555?cS=250" class="btn btn-primary">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 3 -->
+                <div class="col-lg-4 mb-4 custom-categoria ropa">
+                    <div class="card">
+                        <img src="img/PantalonChandalBaggi1.webp" class="card-img-top" alt="Regalo 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Pantalón chándal baggy</h5>
+                            <p class="card-text">Pantalón chándal baggy.</p>
+                            <a href="https://www.pullandbear.com/es/pantalon-chandal-baggy-l07679500?pelement=628713039&cS=800" class="btn btn-primary">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 4 -->
+                <div class="col-lg-4 mb-4 custom-categoria ropa">
+                    <div class="card">
+                        <img src="img/PantalonChandalBaggi2.webp" class="card-img-top" alt="Regalo 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Pantalón chándal baggy</h5>
+                            <p class="card-text">Pantalón chándal baggy.</p>
+                            <a href="https://www.pullandbear.com/es/pantalon-chandal-baggy-l07679500?pelement=628713039&cS=807" class="btn btn-primary">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 5 -->
+                <div class="col-lg-4 mb-4 custom-categoria ropa">
+                    <div class="card">
+                        <img src="img/PantalonBaggy.webp" class="card-img-top" alt="Regalo 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Jeans super baggy</h5>
+                            <p class="card-text">Jeans super baggy.</p>
+                            <a href="https://www.pullandbear.com/es/jeans-super-baggy-l07684511?pelement=621942840&cS=407" class="btn btn-primary">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Categoría: Tecnología -->
+
+                <!-- Producto 1 -->
+                <div class="col-lg-4 mb-4 custom-categoria tecnologia">
+                    <div class="card">
+                        <img src="img/StreamDeck.jpg" class="card-img-top" alt="Regalo 2">
+                        <div class="card-body">
+                            <h5 class="card-title">StreamDeck o mini teclado para opciones y programable</h5>
+                            <p class="card-text">StreamDeck o mini teclado para programarle funciones especificas.</p>
+                            <a href="https://www.amazon.es/Teclado-Mec%C3%A1nico-Multifunci%C3%B3n-Programable-Directo/dp/B0C4PJDKKM/ref=sr_1_4?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&nsdOptOutParam=true&sr=8-4" class="btn btn-primary">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 2 -->
+                <div class="col-lg-4 mb-4 custom-categoria tecnologia">
+                    <div class="card">
+                        <img src="img/Switches.jpg" class="card-img-top" alt="Regalo 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Switches Teclado</h5>
+                            <p class="card-text">Switches de teclado para teclado mecanico</p>
+                            <a href="https://www.amazon.es/Newskill-Optomec%C3%A1nicos-Intercambiables-Repuestos-Interruptores/dp/B0CT958MH1/ref=sr_1_2?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&nsdOptOutParam=true&sr=8-2" class="btn btn-primary">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 3 -->
+                <div class="col-lg-4 mb-4 custom-categoria tecnologia">
+                    <div class="card">
+                        <img src="img/Tbaleta.jpg" class="card-img-top" alt="Regalo 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Tableta grafica</h5>
+                            <p class="card-text">Tableta Grafica para PC</p>
+                            <a href="https://www.amazon.es/S640-Digitalizada-Ultradelgada-Inclinaci%C3%B3n-Personalizadas/dp/B092VM5CVF/ref=sr_1_5?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&sr=8-5" class="btn btn-primary">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 4 -->
+                <div class="col-lg-4 mb-4 custom-categoria ropa">
+                    <div class="card">
+                        <img src="img/ChaquetaBeix.webp" class="card-img-top" alt="Regalo 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Sudadera capucha básica cremallera</h5>
+                            <p class="card-text">Sudadera capucha básica cremallera</p>
+                            <a href="https://www.pullandbear.com/es/sudadera-capucha-basica-cremallera-l07590500?pelement=642397784&cS=712" class="btn btn-primary">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 5 -->
+                <div class="col-lg-4 mb-4 custom-categoria ropa">
+                    <div class="card">
+                        <img src="img/ChaquetaGris.webp" class="card-img-top" alt="Regalo 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Sudadera capucha básica cremallera</h5>
+                            <p class="card-text">Sudadera capucha básica cremallera</p>
+                            <a href="https://www.pullandbear.com/es/sudadera-capucha-basica-cremallera-l07590500?pelement=642397784&cS=807" class="btn btn-primary">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 6 -->
+                <div class="col-lg-4 mb-4 custom-categoria ropa">
+                    <div class="card">
+                        <img src="img/ChaquetaNegra.webp" class="card-img-top" alt="Regalo 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Sudadera capucha básica cremallera</h5>
+                            <p class="card-text">Sudadera capucha básica cremallera</p>
+                            <a href="https://www.pullandbear.com/es/sudadera-capucha-basica-cremallera-l07590500?pelement=642397784&cS=800" class="btn btn-primary">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 7 -->
+                <div class="col-lg-4 mb-4 custom-categoria ropa">
+                    <div class="card">
+                        <img src="img/SudaderaBeix.jpg" class="card-img-top" alt="Regalo 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Sudadera Beige</h5>
+                            <p class="card-text">Sudadera con capucha.</p>
+                            <a href="https://www.bershka.com/es/sudadera-capucha-c0p162282597.html?colorId=721" class="btn btn-primary">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Producto 8 -->
+                <div class="col-lg-4 mb-4 custom-categoria ropa">
+                    <div class="card">
+                        <img src="img/SudaderaGris.jpg" class="card-img-top" alt="Regalo 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Sudadera Gris</h5>
+                            <p class="card-text">Sudadera con capucha Gris.</p>
+                            <a href="#" class="btn btn-primary">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Categoría: Anime -->
+                <div class="col-lg-4 mb-4 custom-categoria ropa">
+                    <div class="card">
+                        <img src="img/ChaquetaNeegra.jpg" class="card-img-top" alt="Regalo 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Chaqueta Negra</h5>
+                            <p class="card-text">Chaqueta negra con capucha.</p>
+                            <a href="https://www.bershka.com/es/sudadera-cremallera-boxy-c0p165175323.html?colorId=800" class="btn btn-primary">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mb-4 custom-categoria tecnologia">
+                    <div class="card">
+                        <img src="img/RAM.webp" class="card-img-top" alt="Regalo 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Memoria RAM</h5>
+                            <p class="card-text">Memoria RAM Kingston FURY Beast DDR4 3200 MHz 16 GB CL16.</p>
+                            <a href="https://www.pccomponentes.com/memoria-ram-kingston-fury-beast-ddr4-3200-mhz-16-gb-cl16" class="btn btn-primary">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mb-4 custom-categoria ropa">
+                    <div class="card">
+                        <img src="img/ChaquetaSpiderman.jpg" class="card-img-top" alt="Regalo 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Spider Sudadera</h5>
+                            <p class="card-text">Sudadera con capucha de SpiderMan.</p>
+                            <a href="https://www.amazon.es/Silver-Basic-Sudadera-Cremallera-Halloween/dp/B0CX4W5KX1/ref=sr_1_3?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&sr=8-3&psc=1" class="btn btn-primary">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mb-4 custom-categoria tecnologia">
+                    <div class="card">
+                        <img src="img/M.2NVME.webp" class="card-img-top" alt="Regalo 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Disco Duro Kingston NV2</h5>
+                            <p class="card-text">Disco Duro Kingston NV2 1TB Disco SSD 3500MB/S NVMe PCIe 4.0 M.2 Gen4.</p>
+                            <a href="https://www.pccomponentes.com/disco-duro-kingston-nv2-1tb-disco-ssd-3500mb-s-nvme-pcie-40-m2-gen4" class="btn btn-primary">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mb-4 custom-categoria ropa">
+                    <div class="card">
+                        <img src="img/Termica.avif" class="card-img-top" alt="Regalo 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Camiseta térmica</h5>
+                            <p class="card-text">Camiseta térmica interior de esquí y nieve Hombre Wedze Ski BL100.</p>
+                            <a href="https://www.decathlon.es/es/p/camiseta-termica-interior-de-esqui-y-nieve-hombre-wedze-ski-bl100/_/R-p-302821?mc=8510029" class="btn btn-primary">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mb-4 custom-categoria extra">
+                    <div class="card">
+                        <img src="img/Shushi.jpg" class="card-img-top" alt="Regalo 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Sushi Kit</h5>
+                            <p class="card-text">Sushi Kit Maker Sushi Bazooka Sushi Completo con alfombrilla de bambú Y Palillos.</p>
+                            <a href="https://www.amazon.es/YSOOUA-Completo-alfombrilla-Principiantes-Alfombrilla/dp/B0CXY4LK2H/ref=sr_1_3_sspa?sr=8-3-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY" class="btn btn-primary">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4 custom-categoria extra">
+                    <div class="card">
+                        <img src="img/KeyBoardCleaner.jpg" class="card-img-top" alt="Regalo 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Limpieza Teclado</h5>
+                            <p class="card-text"> Kit Limpieza Teclado, 11 en 1 Kit Limpieza PC Multifuncional.</p>
+                            <a href="https://www.amazon.es/Alyvisun-Kit-Multifuncional-Limpiador-Auriculares/dp/B0BZCTRKNK/ref=sr_1_1_sspa?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY" class="btn btn-primary">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4 custom-categoria extra">
+                    <div class="card">
+                        <img src="img/PougesForever.jpg" class="card-img-top" alt="Regalo 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Collar de Outer Banks</h5>
+                            <p class="card-text">Collar vintage inspirado en el programa de televisión de Pogue, regalo OBX.</p>
+                            <a href="https://www.amazon.es/KUIYAI-Vintage-Inspirado-Mujeres-inoxidable/dp/B09J7VVJ63/ref=sr_1_13?sr=8-13" class="btn btn-primary">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="javasc.js"></script>
+
+    <script>
+        // Función para filtrar las categorías
+        function filterCategory(category) {
+            const allProducts = document.querySelectorAll('.custom-categoria');
+
+            allProducts.forEach(product => {
+                if (category === 'todo') {
+                    product.style.display = 'block'; // Mostrar todo
+                } else {
+                    if (product.classList.contains(category)) {
+                        product.style.display = 'block'; // Mostrar productos de la categoría seleccionada
+                    } else {
+                        product.style.display = 'none'; // Ocultar los demás productos
+                    }
+                }
+            });
+        }
+
+        // Mostrar todos los productos al cargar la página
+        document.addEventListener("DOMContentLoaded", function () {
+            filterCategory('todo');
+        });
+    </script>
+</body>
+
+</html>
